@@ -1,0 +1,78 @@
+// Generated for: spectre
+// Generated on: Dec 13 13:09:00 2019
+// Design library name: 522_project
+// Design cell name: final_opamp
+// Design view name: schematic
+simulator lang=spectre
+global 0
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_dio_m
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_dio_3m
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_rtmom
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_bbmvar
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_disres
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_mim
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_dio_dnw
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_m
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_3m
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_ana33
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_res
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_bip3
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_bip
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_dio3
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_3v
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_dio
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_na
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_fmom
+include "/nfs/guille/arun/PDK/TSMC018/tsmc18/../models/spectre/cmn018_assp_v1d3.scs" section=tt_3vna
+
+// Library name: 522_project
+// Cell name: final_opamp
+// View name: schematic
+V0 (net15 0) vsource dc=900m type=dc
+V15 (in1 net5) vsource mag=1 phase=180 type=dc
+V16 (in2 net5) vsource mag=0 type=dc
+V2 (net5 0) vsource dc=100m type=dc
+V14 (0 vss) vsource dc=900m type=dc
+M1 (vout net8 vss vss) nch l=500n w=20u m=1 nf=1 sd=540.0n ad=9.6e-12 \
+        as=9.6e-12 pd=40.96u ps=40.96u nrd=0.0135 nrs=0.0135 sa=480.0n \
+        sb=480.0n sca=0 scb=0 scc=0
+M0 (net8 net8 vss vss) nch l=500n w=20u m=1 nf=1 sd=540.0n ad=9.6e-12 \
+        as=9.6e-12 pd=40.96u ps=40.96u nrd=0.0135 nrs=0.0135 sa=480.0n \
+        sb=480.0n sca=0 scb=0 scc=0
+M4 (vout1 vout vss vss) nch l=500n w=20u m=1 nf=1 sd=540.0n ad=9.6e-12 \
+        as=9.6e-12 pd=40.96u ps=40.96u nrd=0.0135 nrs=0.0135 sa=480.0n \
+        sb=480.0n sca=0 scb=0 scc=0
+C1 (net30 vout1) capacitor c=10p
+C0 (vout1 0) capacitor c=5p
+R0 (net30 vout) resistor r=900
+M7 (vout1 net025 net15 net15) pch l=500n w=50u m=1 nf=1 sd=540.0n \
+        ad=2.4e-11 as=2.4e-11 pd=100.96u ps=100.96u nrd=0.0054 nrs=0.0054 \
+        sa=480.0n sb=480.0n sca=0 scb=0 scc=0
+M6 (net13 net025 net15 net15) pch l=500n w=100.0000u m=1 nf=1 sd=540.0n \
+        ad=4.8e-11 as=4.8e-11 pd=200.96u ps=200.96u nrd=0.0027 nrs=0.0027 \
+        sa=480.0n sb=480.0n sca=0 scb=0 scc=0
+M5 (net025 net025 net15 net15) pch l=500n w=100.0000u m=1 nf=1 sd=540.0n \
+        ad=4.8e-11 as=4.8e-11 pd=200.96u ps=200.96u nrd=0.0027 nrs=0.0027 \
+        sa=480.0n sb=480.0n sca=0 scb=0 scc=0
+M3 (vout in1 net13 net13) pch l=500n w=100.0000u m=1 nf=1 sd=540.0n \
+        ad=4.8e-11 as=4.8e-11 pd=200.96u ps=200.96u nrd=0.0027 nrs=0.0027 \
+        sa=480.0n sb=480.0n sca=0 scb=0 scc=0
+M2 (net8 in2 net13 net13) pch l=500n w=100.0000u m=1 nf=1 sd=540.0n \
+        ad=4.8e-11 as=4.8e-11 pd=200.96u ps=200.96u nrd=0.0027 nrs=0.0027 \
+        sa=480.0n sb=480.0n sca=0 scb=0 scc=0
+I2 (net025 vss) isource dc=200u type=dc
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+dcOp dc write="spectre.dc" maxiters=150 maxsteps=10000 annotate=status
+dcOpInfo info what=oppoint where=rawfile
+ac ac start=1 stop=100G annotate=status 
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+saveOptions options save=allpub
